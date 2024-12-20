@@ -117,7 +117,9 @@ def get_stmts_from_source(source_id, *, client, source_ns='HGNC', target_protein
         source_type='BioEntity',
         target_type='BioEntity',
         )
-    
+    for entry in res:
+        print(vars(entry))
+        break
     # Extract necessary information from the result and creates dictionary
     records = [
            {
